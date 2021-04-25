@@ -15,6 +15,7 @@ virsh nodedev-reattach $VIRSH_GPU_AUDIO
 
 # rebind VTconsoles
 echo 1 > /sys/class/vtconsole/vtcon0/bind
+echo 1 > /sys/class/vtconsole/vtcon1/bind
 
 # Read nvidia x config
 nvidia-xconfig --query-gpu-info > /dev/null 2>&1
@@ -31,4 +32,4 @@ modprobe drm
 modprobe nvidia_uvm
 
 # Restart Display service
-systemctl start sddm.service
+systemctl start lightdm.service
