@@ -5,10 +5,11 @@ set -x
 source "/etc/libvirt/hooks/kvm.conf"
 
 # stop display manager
-systemctl stop sddm.service
+systemctl stop lightdm.service
 
 # Unbind VTconsoles
 echo 0 > /sys/class/vtconsole/vtcon0/bind
+echo 0 > /sys/class/vtconsole/vtcon1/bind
 
 # Unbind EFI-framebuffer
 echo efi-framebuffer.0 > /sys/bus/platform/drivers/efi-framebuffer/unbind 
