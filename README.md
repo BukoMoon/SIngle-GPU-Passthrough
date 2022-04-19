@@ -1,4 +1,4 @@
-# SIngle-GPU-Passthrough
+# Single-GPU-Passthrough
 The scripts I used for single gpu passthrough on Manjaro Linux
 
 OS: Manjaro Linux x86_64  
